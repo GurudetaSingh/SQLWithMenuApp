@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/lblID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id" />
+
+    <EditText
+        android:id="@+id/inputID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblID"
+        android:layout_alignLeft="@id/inputPoint"
+        android:layout_alignRight="@id/lblMsg"
+        android:layout_toRightOf="@id/lblID"
+        android:hint="Enter ID"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/lblPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblID"
+        android:layout_marginTop="20dp"
+        android:text="Point (>)" />
+
+    <EditText
+        android:id="@+id/inputPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblPoint"
+        android:layout_alignRight="@id/lblMsg"
+        android:layout_toRightOf="@id/lblPoint"
+        android:hint="Enter Point"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblPoint"
+        android:layout_marginTop="20dp"
+        android:onClick="select"
+        android:text="@string/select" />
+
+    <TextView
+        android:id="@+id/lblMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSelect"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin">
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblName"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/lblName"
+        android:hint="Enter Name"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/lblPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblName"
+        android:layout_alignLeft="@id/lblName"
+        android:layout_marginTop="20dp"
+        android:text="@string/point" />
+
+    <EditText
+        android:id="@+id/inputPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblPoint"
+        android:layout_alignLeft="@id/inputName"
+        android:layout_toRightOf="@id/lblPoint"
+        android:hint="Enter Point"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblPoint"
+        android:layout_alignLeft="@id/lblName"
+        android:layout_marginTop="50dp"
+        android:onClick="insert"
+        android:text="@string/insert" />
+</RelativeLayout>
